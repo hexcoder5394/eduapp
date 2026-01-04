@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Heatmap Base */
+.react-calendar-heatmap text {
+  font-size: 10px;
+  fill: #64748b; /* Slate-500 */
+}
+
+.react-calendar-heatmap .react-calendar-heatmap-weekday-labels {
+  display: none; /* Hide Mon/Tue/Wed if you want cleaner look, or keep */
+}
+
+/* The Empty Squares (Dark Grey) */
+.react-calendar-heatmap .color-empty {
+  fill: #1e293b; /* Slate-800 */
+  rx: 2px; /* Rounded corners */
+}
+
+/* The Colored Squares (Blue/Indigo Scale) */
+.react-calendar-heatmap .color-scale-1 { fill: #312e81; } /* Dark Indigo */
+.react-calendar-heatmap .color-scale-2 { fill: #4338ca; }
+.react-calendar-heatmap .color-scale-3 { fill: #6366f1; }
+.react-calendar-heatmap .color-scale-4 { fill: #a5b4fc; } /* Brightest */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
