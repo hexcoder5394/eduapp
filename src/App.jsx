@@ -9,6 +9,7 @@ import { AuthContextProvider } from './context/AuthContext';
 import Profile from './pages/Profile';
 import Vault from './pages/Vault';
 import CourseDetail from './pages/CourseDetail';
+import Flashcards from './pages/Flashcards';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<Dashboard />} />
             <Route path="/courses" element={<Courses />} />
+            <Route path="/flashcards" element={<Flashcards />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/vault" element={<Vault />} />

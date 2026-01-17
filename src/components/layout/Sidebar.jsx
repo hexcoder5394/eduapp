@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-// CRITICAL FIX: Added 'User' to the import list so the Profile icon works
-import { LayoutDashboard, Library, FolderGit2, LogOut, Menu, Zap, User } from 'lucide-react';
+// CRITICAL FIX: Added 'BrainCircuit' to this list
+import { LayoutDashboard, Library, FolderGit2, LogOut, Menu, Zap, User, BrainCircuit } from 'lucide-react';
 import { UserAuth } from '../../context/AuthContext';
 import UserLevel from './UserLevel'; 
-import { Box } from 'lucide-react'; // Or any icon like Archive/Box
 
 const Sidebar = () => {
   const { logOut } = UserAuth();
@@ -22,8 +21,8 @@ const Sidebar = () => {
     { name: 'Dashboard', path: '/', icon: <LayoutDashboard size={24} /> },
     { name: 'Courses', path: '/courses', icon: <Library size={24} /> },
     { name: 'Projects', path: '/projects', icon: <FolderGit2 size={24} /> },
+    { name: 'Flashcards', path: '/flashcards', icon: <BrainCircuit size={24} /> }, // This caused the error!
     { name: 'Profile', path: '/profile', icon: <User size={24} /> },
-    { name: 'Vault', path: '/vault', icon: <Box size={24} /> },
   ];
 
   return (
